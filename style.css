@@ -1,0 +1,68 @@
+body{
+    max-width: 900px;
+    margin: auto;
+}
+section{
+    max-width: 900px;
+    margin: 4em auto;
+    padding: 2em;
+    border: 1em double black;
+}
+section p{
+    margin: 2em 4em;
+   
+}
+section h3{
+    margin:1em;
+    font-weight: bold;
+}
+h1,h2,i{
+    font-family: 'Playfair Display', serif;
+}
+h3,p{
+    font-family: 'Raleway', sans-serif;
+}
+h1{
+    font-size: 4em;
+    font-weight: 900;
+}
+h2{
+    font-size: 2.5em;
+    font-weight: 900;
+}
+header{
+    text-align: center;
+    border: 1em double black;
+    padding:4em;
+}
+header h1{
+    margin: -0.2em;
+}
+header p{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 400;
+}
+p{
+    
+    font-size: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+hr{
+    margin: 2.5em;
+}
+
+.toc p{
+    margin-top:1em;
+    font-size: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.right{
+    text-align: right;
+}
