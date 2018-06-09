@@ -405,8 +405,8 @@ public class Main {
                 "    but if something like a paralysis toxin is necessary in a life or death situation sacrifices must be made.\n" +
                 "</p>\n" +
                 "<p>Lesser: effect boosted by a factor of 1</p>\n" +
-                "<p>Lesser: effect boosted by a factor of 1.3</p>\n" +
-                "<p>Lesser: effect boosted by a factor of 2</p>\n" +
+                "<p>Mid: effect boosted by a factor of 1.3</p>\n" +
+                "<p>Greater: effect boosted by a factor of 2</p>\n" +
                 "\n" +
                 "<h3>Durators</h3>\n" +
                 "<p>Lesser: 1 turn</p>\n" +
