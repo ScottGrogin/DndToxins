@@ -126,7 +126,7 @@ public class Main {
                 "    <title>Toxins</title>\n" +
                 "</head>\n" +
                 "<body>\n" +
-                "   <header> <h1>The</h1> <h1>Principia</h1> <h1>Toxicology</h1>\n" +
+                "   <header> <h1>The</h1> <h1>Principia</h1> <h1>Toxicologiae</h1>\n" +
                 "<hr>\n"+
                 "   <p>Autore: Eastly Whitekey</p> \n"+
                 "<hr>\n"+
@@ -236,7 +236,7 @@ public class Main {
         Mountain.addIngredient(new Ingredient("Silverthorn: Local Paralysis", Rarity.COMMON, IngCategory.EFFECTOR));
         Mountain.addIngredient(new Ingredient("Nyissa Pollen: Itch", Rarity.COMMON, IngCategory.EFFECTOR));
 
-        Mountain.addIngredient(new Ingredient("Ephedra Sinica: Coma", Rarity.UNCOMMON, IngCategory.EFFECTOR));
+        Mountain.addIngredient(new Ingredient("Ephedra Sinica: Mid Durator", Rarity.UNCOMMON, IngCategory.DURATOR));
 
         Mountain.addIngredient(new Ingredient("Rainbow Pheasant Feathers: Greater Durator", Rarity.RARE, IngCategory.DURATOR));
         Mountain.addIngredient(new Ingredient("Powdered Dragon Bone: Greater Catalyst", Rarity.RARE, IngCategory.CATALYST));
@@ -316,6 +316,9 @@ public class Main {
             }
         }
         System.out.println("</p>");
+
+        System.out.println("<h3>Appendix<h3>");
+        System.out.println("<p>Ingredients List, Numerical Analysis of Toxin Effectiveness,</p>");
         System.out.println("</section>");
 
 
@@ -369,6 +372,58 @@ public class Main {
             }
         }
 
+        System.out.println("<section>");
+        System.out.println("<p class=right>Appendix</p>");
+            System.out.println("<h2>Ingredients List<h2>");
+        for(int i=0; i<biomes.size();i++){
+            System.out.println("<h3>");
+            System.out.println(biomes.get(i).name);
+            System.out.println("</h3>");
+            System.out.println("<p>");
+            for(int j=0; j< biomes.get(i).ingredients.size(); j++){
+                String[] names = biomes.get(i).ingredients.get(j).name.split(":");
+                System.out.print("<b>"+names[0]+"</b>"+ ": "+names[1]+", ");
+            }
+            System.out.println("</p>");
+        }
+        System.out.println("</section>");
+
+        System.out.println("<section>");
+        System.out.println("<p class=right>Appendix</p>");
+        System.out.println("<h2>Numerical Analysis of Toxin Effectiveness</h2>");
+        System.out.print("<p>\n" +
+                "    Although incomplete, I thought it would be beneficial to include\n" +
+                "    some of my findings about precise nature of how ingredients scale \n" +
+                "    a potions effectiveness.Later editions will most certainly have a more extensive \n" +
+                "    analysis.\n" +
+                "</p>\n" +
+                "\n" +
+                "<h3>Catalysts</h3>\n" +
+                "<p>Note that there some effects that are not boosted by a better catalyst. These effects \n" +
+                "    are things like paralysis where one can either be paralysis or not, there are not varying degrees of\n" +
+                "    paralysis in the context of toxins. It would be wasteful to use a powerful catalyst on effectors of this nature, \n" +
+                "    but if something like a paralysis toxin is necessary in a life or death situation sacrifices must be made.\n" +
+                "</p>\n" +
+                "<p>Lesser: effect boosted by a factor of 1</p>\n" +
+                "<p>Lesser: effect boosted by a factor of 1.3</p>\n" +
+                "<p>Lesser: effect boosted by a factor of 2</p>\n" +
+                "\n" +
+                "<h3>Durators</h3>\n" +
+                "<p>Lesser: 1 turn</p>\n" +
+                "<p>Mid: 2 turns</p>\n" +
+                "<p>Greater: 3 turns</p>\n" +
+                "\n" +
+                "<h3>Restore Health</h3>\n" +
+                "<p>Lesser: 2 * knowledge</p>\n" +
+                "<p>Mid: 3 * knowledge</p>\n" +
+                "<p>Greater: 4 * knowledge</p>\n" +
+                "\n" +
+                "<h3>Hemorrhage</h3>\n" +
+                "<p>Lesser: 2 * knowledge</p>\n" +
+                "<p>Mid: 3 * knowledge</p>\n" +
+                "<p>Greater: 4 * knowledge</p>\n" +
+                "\n");
+        System.out.println("</section>");
         System.out.print("</body> \n </html>");
 
     }
